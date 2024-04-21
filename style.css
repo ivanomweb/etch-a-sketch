@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.board {
+  height: 502px;
+  width: 502px;
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.squares {
+}
