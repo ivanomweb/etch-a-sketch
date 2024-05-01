@@ -1,22 +1,40 @@
 const board = document.querySelector(".board");
-let boardWidth = board.style.width;
-let boardHeight = board.style.height;
+let boardSide = board.offsetWidth;
 const slider = document.querySelector(".slider");
 const sliderLabel = document.querySelector(".slider-label");
+const resetBtn = document.querySelector(".reset");
+sliderLabel.textContent = slider.value + " X " + slider.value;
+
+function createBoard() {
+  for (let i = slider.value ** 2; i > 0; i--) {
+    let square = document.createElement("div");
+    square.className = "squares";
+    square.style.width = (boardSide - 2) / slider.value + "px";
+    square.style.height = (boardSide - 2) / slider.value + "px";
+    board.appendChild(square);
+    square.addEventListener("mouseover", (e) => {
+      e.target.style.backgroundColor = "black";
+    });
+  }
+}
+
+function deleteBoard() {
+  while (board.firstChild) {
+    board.removeChild(board.firstChild);
+  }
+}
+
+createBoard();
 
 slider.addEventListener("change", () => {
-  sliderLabel.textContent = slider.getAttribute("value");
+  sliderLabel.textContent = slider.value + " X " + slider.value;
+  deleteBoard();
+  createBoard();
 });
 
-for (var i = 10000; i > 0; i--) {
-  var square = document.createElement("div");
-  square.className = "squares";
-  square.style.width = "5px";
-  square.style.height = "5px";
-  board.appendChild(square);
-  square.addEventListener("mouseover", (e) => {
-    e.target.style.backgroundColor = "black";
-  });
-}
+resetBtn.addEventListener("click", () => {
+  deleteBoard();
+  createBoard();
+});
 
 console.log("Everyhting works");

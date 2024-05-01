@@ -4,20 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>Etch a sketch</title>
   </head>
   <body>
     <div class="board"></div>
-    <input
-      type="range"
-      min="5"
-      max="105"
-      value="50"
-      class="slider"
-      id="myRange"
-      step="10"
-    />
-    <span class="slider-label"></span>
+
+    <div class="inputs-div">
+      <div class="slider-div">
+        <input
+          type="range"
+          min="10"
+          max="100"
+          value="10"
+          class="slider"
+          id="myRange"
+          step="10"
+        />
+        <span class="slider-label"></span>
+      </div>
+      <button class="reset">Reset</button>
+    </div>
+
     <script src="index.js" defer></script>
   </body>
 </html>

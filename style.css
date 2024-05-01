@@ -8,6 +8,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   height: 100vh;
 }
 
@@ -19,5 +20,14 @@ body {
   flex-wrap: wrap;
 }
 
-.squares {
+.inputs-div {
+  margin-top: 40px;
+  display: flex;
+  gap: 100px;
+}
+
+.slider-div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
