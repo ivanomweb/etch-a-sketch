@@ -10,6 +10,7 @@ body {
   justify-content: center;
   flex-direction: column;
   height: 100vh;
+  font-family: "Kode Mono", monospace;
 }
 
 .board {
@@ -30,4 +31,17 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+button {
+  padding: 7px;
+  border: none;
+  box-shadow: 2px 2px 0 0 black;
+  border: 1px solid black;
+}
+
+button:hover {
+  transform: translate(-1px, -1px);
+  top: 0;
+  left: 0;
 }
